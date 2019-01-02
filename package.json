@@ -1,0 +1,38 @@
+{
+  "name": "electron-learn",
+  "version": "1.0.0",
+  "description": "electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager ./ myapp --out ./OutApp --version 1.7.9 --overwrite --icon=./logo.ico",
+	"dist": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.xxx.app",
+    "mac": {
+      "target": ["dmg","zip"]
+    },
+    "win": {
+      "target": ["nsis","zip"]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ofroad/electron-learn.git"
+  },
+  "keywords": [
+    "electron"
+  ],
+  "author": "ofroad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ofroad/electron-learn/issues"
+  },
+  "homepage": "https://github.com/ofroad/electron-learn#readme",
+  "devDependencies": {
+    "electron": "^4.0.0",
+    "electron-builder": "^20.38.4",
+    "electron-packager": "^11.2.1"
+  }
+}
